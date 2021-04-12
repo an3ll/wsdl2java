@@ -1,35 +1,16 @@
-### Deprecation notice
-
-This plugin is no longer maintained by its creator since I dont have any interest in using this plugin anymore and find no pleasure in maintaining it for free/fun. Please fork it and use it as you like. The plugin is not published to any relevant plugin-portals. 
-
 wsdl2java gradle plugin
 =========
 
-[![Known Vulnerabilities](https://snyk.io/test/github/nilsmagnus/wsdl2java/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/nilsmagnus/wsdl2java?targetFile=build.gradle)
-[![Build Status](https://cloud.drone.io/api/badges/nilsmagnus/wsdl2java/status.svg)](https://cloud.drone.io/nilsmagnus/wsdl2java)
-[ ![Download](https://api.bintray.com/packages/nilsmagnus/maven/wsdl2java/images/download.svg?version=0.12) ](https://bintray.com/nilsmagnus/maven/wsdl2java/0.12/link)
+This is a fork of https://github.com/nilsmagnus/wsdl2java that enables wsdl2java plugin to work with gradle 7.0 and newer
+
 
 Gradle plugin for generating java from wsdl, using cxf under the hood and the same options as the maven wsdl-2-java plugin from apache-cxf.
 
-The plugin binaries are downloadable from bintray: https://bintray.com/nilsmagnus/maven/wsdl2java/
-
 ### Issues
-If you have any issues with the plugin, please file an issue at github, https://github.com/nilsmagnus/wsdl2java/issues
+If you have any issues with the plugin, please file an issue at github, https://github.com/an3ll/wsdl2java/issues
 
 ### Contribution
 Contributions are welcome as long as they are sane.
-
-#### Contributors
-- Nils Larsgård , https://github.com/nilsmagnus
-- Mats Faugli, https://github.com/fowlie
-- Thorben Schiller, https://github.com/thorbolo
-- Stefan Kloe, https://github.com/Pentadrago
-- Mattias Rundgren, https://github.com/matrun
-- Steffen Döring, https://github.com/s-doering
-- Jesper Skov, https://github.com/jskovjyskebankdk
-- Manuel Sanches Ortiz, https://github.com/manuelsanchezortiz
-- Ruben Gees, https://github.com/rubengees
-- Stefan Krause-Kjær, https://github.com/KrauseStefan
 
 ### CXF
 This plugin uses the apache-cxf tools to do the actual work.
@@ -59,11 +40,11 @@ buildscript{
         mavenCentral()
     }
     dependencies {
-        classpath 'no.nils:wsdl2java:0.12'
+        classpath 'com.github.an3ll:wsdl2java:0.13'
     }
 }
 
-apply plugin: 'no.nils.wsdl2java'
+apply plugin: 'com.github.an3ll.wsdl2java'
 ```
 
 Kotlin:
@@ -71,7 +52,7 @@ Kotlin:
 ```kotlin
 plugins {
     id("java")
-    id("no.nils.wsdl2java") version "0.12"
+    id("com.github.an3ll.wsdl2java") version "0.13"
 }
 ```
 
@@ -151,12 +132,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'no.nils:wsdl2java:0.12'
+        classpath 'com.github.an3ll:wsdl2java:0.13'
     }
 }
 
 apply plugin: 'java'
-apply plugin: 'no.nils.wsdl2java'
+apply plugin: 'com.github.an3ll.wsdl2java'
 
 repositories {
     mavenCentral()
