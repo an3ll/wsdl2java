@@ -54,6 +54,7 @@ class Wsdl2JavaPlugin : Wsdl2JavaPlugin() {
             task.group = "Wsdl2Java"
             task.description = "Generate java source code from WSDL files."
             task.classpath = wsdl2javaConfiguration
+            task.extension = extension
         }
 
         project.tasks.named("compileJava").configure { task ->

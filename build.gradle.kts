@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.github.an3ll"
-version = "0.13"
+version = "0.14"
 
 repositories {
     mavenCentral()
